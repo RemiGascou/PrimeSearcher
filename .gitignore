@@ -1,3 +1,7 @@
+# Specific files from this project
+*.primes
+
+
 # Prerequisites
 *.d
 
