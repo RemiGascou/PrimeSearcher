@@ -5,6 +5,9 @@
 #include "./lib/primesfileslib.h"
 #include "./lib/lib_bash_colors.h"
 
+#define MAX_WORKERS 4
+
+//int[] workers[MAX_WORKERS];
 
 void * worker(char workername[], char fname[], int checkpoint) {
 
@@ -43,7 +46,7 @@ int main (int argc, char *argv[]) {
 	int last = 1;
 	char * primefilename = "primeslist.primes";
 
-	printf(ANSI_COLOR_LIGHTYELLOW"============= Linear Prime Searcher v1.0.1 =============\n"ANSI_COLOR_RESET);
+	printf(ANSI_COLOR_LIGHTYELLOW"============= Prime Searcher v1.0.1 =============\n"ANSI_COLOR_RESET);
 	printf("Prime file exixsting ? ");
 
 	if (primefexists(primefilename)) {
